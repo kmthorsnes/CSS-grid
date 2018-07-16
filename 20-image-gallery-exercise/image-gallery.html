@@ -179,7 +179,7 @@
     }
 
     function close() {
-      overlay.classList.close('open');
+      overlay.classList.remove('open');
     }
 
     const digits = Array.from({
@@ -216,6 +216,8 @@
     const items = document.querySelectorAll('.item');
 
     items.forEach(item => item.addEventListener('click', handleClick));
+
+    overlayClose.addEventListener('click', close);
   </script>
 </body>
 
